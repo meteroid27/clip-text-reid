@@ -1,0 +1,4 @@
+CLIP Text ReID stage-1 training project.
+Main training script: scripts/train.py
+Reusable package code: src/clip_text_reid/train.py
+Detailed notes: docs/training_notes.md
