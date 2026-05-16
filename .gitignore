@@ -26,8 +26,6 @@ dist/
 # Logs
 *.log
 
-# Model artifacts
-checkpoints/*.pth
-checkpoints/*.npy
-*.pth
-*.npy
+# Model artifacts - tracked via Git LFS (*.pth, *.npy allowed at root)
+# Intermediate / local-only caches
+__dataset_cache__/
