@@ -6,22 +6,6 @@ A faithful single-file implementation of **IRRA** — *Cross-Modal Implicit Rela
 
 ---
 
-## Why IRRA?
-
-| Metric  | Baseline (CLIP prompt only) | IRRA (this repo) |
-|---------|-----------------------------|-------------------|
-| Rank-1  | ~48.5%                      | ~68–73% (expected)|
-| mAP     | ~37.9%                      | ~60–66% (expected)|
-
-Key improvements over the old CLIP prompt-learning approach:
-
-- **SDM Loss** — Similarity Distribution Matching (IRRA's core). Replaces InfoNCE; handles multiple positives per identity correctly via KL-divergence on soft label distributions. (+5% Rank-1)
-- **Full CLIP fine-tuning** — Both image encoder and text transformer are fine-tuned end-to-end. (+4% Rank-1)
-- **MLM with Cross-Modal Attention (IRR module)** — Random text tokens are masked → cross-attended to image patch tokens → predicted back. Forces fine-grained text-image alignment. (+2–3% Rank-1)
-- **Person-level train/test split** — No identity leakage between train and test sets.
-
----
-
 ## Repository Structure
 
 ```
